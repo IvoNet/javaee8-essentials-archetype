@@ -17,7 +17,8 @@ if [ $? -eq 1 ] || [ "$RUNNING" == "false" ]; then
      ivonet/wildfly:14.0.1.Final
 #     ivonet/payara:4
 
-    echo "Admin console credentials:"
+    echo "WildFly admin console credentials:"
+    echo "Url: http://localhost:9990"
     echo "Usr: admin"
     echo "Pwd: s3cr3t"
 
