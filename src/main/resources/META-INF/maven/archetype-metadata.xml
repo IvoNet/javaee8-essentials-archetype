@@ -57,7 +57,6 @@
                 <include>buildAndDeploy.sh</include>
                 <include>logs.sh</include>
                 <include>run.sh</include>
-                <include>pom.sh</include>
             </includes>
         </fileSet>
 
