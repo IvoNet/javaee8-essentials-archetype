@@ -27,7 +27,7 @@
         <developer>
             <name>Ivo Woltring</name>
             <organization>IvoNet.nl</organization>
-            <organizationUrl>http://ivonet.nl</organizationUrl>
+            <organizationUrl>https://www.ivonet.nl</organizationUrl>
         </developer>
     </developers>
     <packaging>maven-archetype</packaging>
