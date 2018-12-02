@@ -11,10 +11,10 @@
     <version>0.0.2-SNAPSHOT</version>
     <name>javaee8-essentials-archetype</name>
     <description>Java EE 8 project minimalistic quickstart template.</description>
-    <url>http://ivonet.nl</url>
+    <url>https://www.ivonet.nl</url>
     <organization>
         <name>Ivo Woltring</name>
-        <url>http://ivonet.nl</url>
+        <url>https://www.ivonet.nl</url>
     </organization>
     <inceptionYear>2018</inceptionYear>
     <licenses>
