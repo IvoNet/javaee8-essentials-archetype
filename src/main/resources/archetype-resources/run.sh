@@ -3,18 +3,19 @@
 #set( $symbol_escape = '\' )
 #!/usr/bin/env bash
 
-RUNNING=$(docker inspect --format="{{ .State.Running }}" jee 2> /dev/null)
+RUNNING=$(docker inspect --format="{{ .State.Running }}" ${artifactId} 2> /dev/null)
 if [ $? -eq 1 ] || [ "$RUNNING" == "false" ]; then
     rm -rfv ./artifact/*.war
 
     docker run \
      -d \
      --rm \
-     --name jee \
+     --name ${artifactId} \
      -p 8080:8080 \
      -p 9990:9990 \
      -v "$(pwd)/artifact:/deployments" \
      ivonet/wildfly:14.0.1.Final
+#     ivonet/payara:4
 
     echo "Admin console credentials:"
     echo "Usr: admin"
@@ -22,7 +23,7 @@ if [ $? -eq 1 ] || [ "$RUNNING" == "false" ]; then
 
     mvn clean package
 else
-    /usr/bin/osascript -e 'display notification "Stopping..." with title "jee"'
-    docker rm -f jee
+    /usr/bin/osascript -e 'display notification "Stopping..." with title "${artifactId}"'
+    docker rm -f ${artifactId}
 fi
 

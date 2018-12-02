@@ -19,3 +19,6 @@ You can follow the logging by running `logs.sh` when you run the local version
 
 See the `buildAndrun.sh` script
 
+# Example endpoint
+
+[http://localhost:8080/${artifactId}/rest/example](http://localhost:8080/${artifactId}/rest/example)
