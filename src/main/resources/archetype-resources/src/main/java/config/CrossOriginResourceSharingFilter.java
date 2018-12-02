@@ -1,14 +1,12 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.config;
+
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;
 import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.ext.Provider;
-
-#set($symbol_pound='#')
-      #set($symbol_dollar='$')
-      #set($symbol_escape='\' )
-
-
-      package ${package}.config;
 
 /**
  * Allows Access to calls from another origin.

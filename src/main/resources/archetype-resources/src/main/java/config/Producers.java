@@ -1,14 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+
+package ${package}.config;
+
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 import java.util.logging.Logger;
 
 import static java.util.logging.Logger.getLogger;
-
-#set($symbol_pound='#')
-      #set($symbol_dollar='$')
-      #set($symbol_escape='\' )
-
-      package ${package}.config;
 
 public class Producers {
 
@@ -18,6 +18,4 @@ public class Producers {
                            .getDeclaringClass()
                            .getName());
     }
-
-
 }
