@@ -10,9 +10,12 @@ mvn dependency:get \
    -DgroupId=nl.ivonet \
    -DartifactId=javaee8-essentials-archetype \
    -Dversion=0.0.2
+   
+mvn archetype:crawl
+   
 ```
 
-## Run from mvn cenral repo
+## Run from mvn central repo
 
 ```bash
 mvn archetype:generate \
