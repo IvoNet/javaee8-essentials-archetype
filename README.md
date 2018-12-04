@@ -2,10 +2,29 @@
 
 A quickstart maven archetype for creating greenfield Java EE 8 projects
 
-from the commandline:
+
+## Install in local repo
 
 ```bash
-mvn archetype:generate -DarchetypeGroupId=nl.ivonet -DarchetypeArtifactId=javaee8-essentials-archetype -DarchetypeVersion=0.0.2 -U
+mvn dependency:get \
+   -DgroupId=nl.ivonet \
+   -DartifactId=javaee8-essentials-archetype \
+   -Dversion=0.0.2
 ```
-to create a fully fledged Java EE 8 project. Use the most recent version if available.
 
+## Run from mvn cenral repo
+
+```bash
+mvn archetype:generate \
+    -DarchetypeGroupId=nl.ivonet \
+    -DarchetypeArtifactId=javaee8-essentials-archetype \
+    -DarchetypeVersion=0.0.2 -U
+```
+
+## Run if offline available
+
+```bash
+mvn archetype:generate -Dfilter=nl.ivonet:
+```
+
+this will filter the archetype list on my groupId
