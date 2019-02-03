@@ -2,18 +2,23 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 #!/usr/bin/env bash
-#DEPLOY="false"
-DEPLOY="true"
-IMAGE=${artifactId}
-#VERSION=latest
-VERSION=${version}
+#deploy="false"
+deploy="true"
 
-OPTIONS=""
-OPTIONS="--no-cache --force-rm"
+image=${artifactId}
+version=${version}
+latest=true
+
+#OPTIONS="--no-cache --force-rm"
 #OPTIONS="--no-cache"
 #OPTIONS="--force-rm"
+OPTIONS=""
 
-docker build ${OPTIONS} -t ivonet/${IMAGE}:${VERSION} .
-if [ "$?" -eq 0 ] && [ ${DEPLOY} == "true" ]; then
-    docker push ivonet/${IMAGE}:${VERSION}
+docker build ${OPTIONS} -t ${docker-hub-name}/${image}:${version} .
+if [ "$?" -eq 0 ] && [ ${deploy} == "true" ]; then
+    docker push ${docker-hub-name}/${image}:${version}
+    if [ "$latest" == "true" ]; then
+        docker tag ${docker-hub-name}/${image}:${version} ${docker-hub-name}/${image}:latest
+        docker push ${docker-hub-name}/${image}:latest
+    fi
 fi

@@ -14,8 +14,8 @@ if [ $? -eq 1 ] || [ "$RUNNING" == "false" ]; then
      -p 8080:8080 \
      -p 9990:9990 \
      -v "$(pwd)/artifact:/deployments" \
-     ivonet/wildfly:14.0.1.Final
-#     ivonet/payara:4
+     ivonet/wildfly:15.0.1.Final
+#     ivonet/payara:5.184
 
     echo "WildFly admin console credentials:"
     echo "Url: http://localhost:9990"
