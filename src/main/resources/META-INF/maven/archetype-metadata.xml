@@ -62,8 +62,6 @@
 
     </fileSets>
     <requiredProperties>
-            <requiredProperty key="docker-hub-name">
-                <defaultValue>ivonet</defaultValue>
-            </requiredProperty>
-        </requiredProperties>
+        <requiredProperty key="docker-hub-name"/>
+    </requiredProperties>
 </archetype-descriptor>
