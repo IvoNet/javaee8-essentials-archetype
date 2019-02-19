@@ -3,6 +3,10 @@
 A quickstart maven archetype for creating greenfield Java EE 8 projects 
 with wildfly as the Application Server
 
+# Get started
+
+* [Java EE /Jakarta EE - Initializr](http://ivo2u.nl/oq)
+
 ## Run from mvn central repo
 
 ```bash
